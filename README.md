@@ -131,17 +131,34 @@ Interactive charts, batch statistics, time-based filtering, and CSV export.
 ### AI Assistant
 Conversational interface for interpreting AI predictions and exploring security-related information.
 
-## Screenshots
 
-Application screenshots will be added to the repository.
+## Application Screenshots
 
-Planned screenshots:
+### Dashboard
+Overview of network traffic predictions, security statistics, and threat distribution.
 
-- Dashboard overview
-- AI Detection interface
-- Prediction History
-- Analytics dashboard
-- AI Assistant
+![NetGuard AI Dashboard](screenshots/dashboard.png)
+
+### AI Detection
+Machine learning-based classification of network traffic as BENIGN or DDoS.
+
+![AI Detection](screenshots/detection.png)
+
+### Prediction History
+Stored prediction results with integrated AI-powered explanations.
+
+![Prediction History](screenshots/history.png)
+
+### Analytics
+Interactive visualizations, historical statistics, and batch analysis insights.
+
+![NetGuard AI Analytics](screenshots/analytics.png)
+
+### AI Security Assistant
+AI-powered assistant for interpreting predictions and providing security-related explanations.
+
+![AI Security Assistant](screenshots/assistant.png)
+
 
 ## Project Structure
 
