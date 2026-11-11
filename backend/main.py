@@ -12,6 +12,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 import os
 from dotenv import load_dotenv
+from fastapi.responses import JSONResponse
 
 load_dotenv()
 
@@ -28,6 +29,29 @@ app = FastAPI(
     version="1.0.0"
 )
 
+
+@app.middleware("http")
+async def protect_public_demo(request, call_next):
+
+    demo_read_only = (
+        os.getenv("PUBLIC_DEMO_READ_ONLY", "false").lower()
+        == "true"
+    )
+
+    if demo_read_only and request.method in {
+        "POST", "PUT", "PATCH", "DELETE"
+    }:
+        return JSONResponse(
+            status_code=403,
+            content={
+                "detail": (
+                    "This operation is disabled in the "
+                    "public read-only demo."
+                )
+            }
+        )
+
+    return await call_next(request)
 
 # Omogucavanje komunikacije s React frontendom
 
