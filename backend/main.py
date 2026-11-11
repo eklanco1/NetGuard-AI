@@ -2,6 +2,11 @@
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
+from pipeline.monitoring_api import router as monitoring_router
+
+from pipeline.alerts_api import router as alerts_router
+
+
 from fastapi.middleware.cors import CORSMiddleware
 
 
@@ -50,6 +55,14 @@ app.include_router(
 )
 
 
+app.include_router(
+    monitoring_router,
+    prefix="/api/v1",
+    tags=["Network Monitoring"]
+)
+
+
+app.include_router(alerts_router, prefix="/api/v1")
 
 # Provjera rada backenda
 @app.get("/api/v1/health")
