@@ -33,6 +33,24 @@ the CIC-IDS2017 DDoS dataset.
 Synthetic demonstration records do not represent actual
 model inference results or real security incidents.
 
+### Try the AI Model
+
+Experience the trained DDoS detection model directly in your browser:
+
+**[Launch Interactive AI Detection Demo](https://netguard-ai-cih.pages.dev/demo)**
+
+Select either a BENIGN or DDoS traffic sample and run the
+machine learning inference process.
+
+The model returns:
+- Predicted traffic classification
+- Estimated DDoS probability
+- Packets per second
+- Selected traffic scenario
+
+The interactive demo uses predefined CIC-IDS2017 samples
+and does not modify the database.
+
 ## Key Features
 
 **AI-Powered Traffic Detection**
@@ -81,6 +99,13 @@ model inference results or real security incidents.
 - Active and Resolved alert management
 - Alert statistics and status filtering
 - Automatic dashboard refresh
+
+**Interactive AI Detection Demo**
+- Publicly accessible ML inference demonstration
+- BENIGN and DDoS sample selection
+- Real-time inference using the trained model
+- Prediction probabilities and traffic metrics
+- Read-only operation without database writes
 
 ## Technology Stack
 
