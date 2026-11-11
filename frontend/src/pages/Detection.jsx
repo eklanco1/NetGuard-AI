@@ -1,3 +1,4 @@
+import API_URL from '../config/api'
 import BatchAnalysis from '../components/BatchAnalysis'
 import { useState } from 'react'
 import BatchHistory from '../components/BatchHistory'
@@ -86,7 +87,7 @@ async function handleFileUpload(event) {
 
     try {
       const response = await fetch(
-        'http://127.0.0.1:8000/api/v1/predict',
+        `${API_URL}/api/v1/predict`,
         {
           method: 'POST',
           headers: {

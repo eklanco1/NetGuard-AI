@@ -1,3 +1,4 @@
+import API_URL from '../config/api'
 
 import { useEffect, useState } from 'react'
 
@@ -20,7 +21,7 @@ function BatchHistory() {
     async function fetchBatchHistory() {
       try {
         const response = await fetch(
-          'http://127.0.0.1:8000/api/v1/predictions/batches',
+          `${API_URL}/api/v1/predictions/batches`,
           { signal: controller.signal }
         )
 
@@ -59,7 +60,7 @@ function BatchHistory() {
 
     try {
       const response = await fetch(
-        `http://127.0.0.1:8000/api/v1/predictions/batches/${batchId}`
+        `${API_URL}/api/v1/predictions/batches/${batchId}`
       )
 
       if (!response.ok) {

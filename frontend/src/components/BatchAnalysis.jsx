@@ -1,3 +1,4 @@
+import API_URL from '../config/api'
 
 import { useState } from 'react'
 
@@ -40,7 +41,7 @@ const currentResults = result
       formData.append('file', file)
 
       const response = await fetch(
-        'http://127.0.0.1:8000/api/v1/predict/batch',
+        `${API_URL}/api/v1/predict/batch`,
         {
           method: 'POST',
           body: formData

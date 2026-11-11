@@ -1,3 +1,4 @@
+import API_URL from '../config/api'
 
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router'
@@ -17,7 +18,7 @@ const explainPrediction = (predictionId) => {
     }
   })
 }
-  
+
 useEffect(() => {
 
   const controller = new AbortController()
@@ -25,10 +26,8 @@ useEffect(() => {
   async function fetchPredictions() {
     setLoading(true)
     setError(null)
-
-    try {
-      let url = 'http://127.0.0.1:8000/api/v1/predictions?limit=10'
-
+try {
+    let url = `${API_URL}/api/v1/predictions?limit=10`
       if (filter !== 'ALL') {
         url += `&prediction=${filter}`
       }
@@ -71,7 +70,7 @@ useEffect(() => {
       <h2>Recent AI Predictions</h2>
       <p>Latest network traffic classifications</p>
 
-      
+
 <div className="prediction-filters">
 
   <button

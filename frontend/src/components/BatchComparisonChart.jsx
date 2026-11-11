@@ -1,3 +1,4 @@
+import API_URL from '../config/api'
 
 import { useEffect, useState } from 'react'
 
@@ -24,7 +25,7 @@ function BatchComparisonChart() {
     async function fetchBatchComparison() {
       try {
         const response = await fetch(
-          'http://127.0.0.1:8000/api/v1/predictions/batches/stats',
+          `${API_URL}/api/v1/predictions/batches/stats`,
           { signal: controller.signal }
         )
 

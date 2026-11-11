@@ -1,3 +1,4 @@
+import API_URL from '../config/api'
 
 import { useEffect, useState } from 'react'
 
@@ -22,7 +23,7 @@ function TrafficDistribution() {
     async function fetchDistribution() {
       try {
         const response = await fetch(
-          'http://127.0.0.1:8000/api/v1/predictions/stats',
+          `${API_URL}/api/v1/predictions/stats`,
           { signal: controller.signal }
         )
 

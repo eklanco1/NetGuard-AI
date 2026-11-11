@@ -1,3 +1,4 @@
+import API_URL from '../config/api'
 import { useEffect, useRef, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router'
 
@@ -53,7 +54,7 @@ function AIAssistant() {
 
     try {
       const response = await fetch(
-        'http://127.0.0.1:8000/api/v1/chat',
+        `${API_URL}/api/v1/chat`,
         {
           method: 'POST',
           headers: {

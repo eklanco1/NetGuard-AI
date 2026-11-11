@@ -10,6 +10,11 @@ from pipeline.alerts_api import router as alerts_router
 from fastapi.middleware.cors import CORSMiddleware
 
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 # Uvoz AI rutera
 from pipeline.predict_api import router as predict_router
@@ -25,16 +30,25 @@ app = FastAPI(
 
 
 # Omogucavanje komunikacije s React frontendom
+
+allowed_origins = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173"
+]
+
+frontend_url = os.getenv("FRONTEND_URL")
+
+if frontend_url:
+    allowed_origins.append(frontend_url.rstrip("/"))
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173"
-    ],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"]
 )
+
 
 
 app.include_router(chat_router, prefix="/api/v1")
