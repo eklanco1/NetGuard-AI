@@ -1,0 +1,170 @@
+
+.demo-page {
+  color: #e2e8f0;
+  padding: 10px 0 40px;
+}
+
+.demo-header {
+  margin-bottom: 28px;
+}
+
+.demo-header h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.demo-header p,
+.demo-description,
+.demo-disclaimer {
+  color: #94a3b8;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.demo-panel,
+.demo-result {
+  background: #111c2e;
+  border: 1px solid #243449;
+  border-radius: 15px;
+  padding: 26px;
+  margin-bottom: 24px;
+}
+
+.demo-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+}
+
+.demo-options {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.demo-options button {
+  flex: 1;
+  min-width: 160px;
+  padding: 18px;
+  background: #1b2a40;
+  color: #e2e8f0;
+  border: 1px solid #34445d;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.demo-options .benign {
+  border-color: #22c55e;
+  background: #153b2b;
+  color: #4ade80;
+}
+
+.demo-options .ddos {
+  border-color: #ef4444;
+  background: #451b25;
+  color: #f87171;
+}
+
+.demo-options button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.demo-description {
+  margin: 20px 0;
+}
+
+.demo-analyze {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 9px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.demo-analyze:hover {
+  background: #1d4ed8;
+}
+
+.demo-analyze:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.demo-error {
+  margin-top: 18px;
+  padding: 15px;
+  background: #451b25;
+  border-radius: 9px;
+  color: #fecaca;
+}
+
+.demo-result h2 {
+  margin: 0 0 22px;
+  font-size: 21px;
+}
+
+.demo-result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.demo-result-card {
+  background: #1b2a40;
+  border: 1px solid #34445d;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.demo-result-card span {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.demo-result-card strong {
+  font-size: 25px;
+}
+
+.demo-green { color: #4ade80; }
+.demo-red { color: #f87171; }
+
+.demo-message {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 9px;
+  font-weight: 600;
+}
+
+.demo-message.safe {
+  background: #153b2b;
+  color: #4ade80;
+}
+
+.demo-message.threat {
+  background: #451b25;
+  color: #f87171;
+}
+
+.demo-disclaimer {
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+@media (max-width: 650px) {
+  .demo-result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-options {
+    flex-direction: column;
+  }
+}

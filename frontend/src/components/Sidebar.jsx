@@ -77,6 +77,16 @@ function Sidebar() {
         >
           AI Assistant
         </NavLink>
+        
+
+        <NavLink
+          to="/demo"
+          className={({ isActive }) =>
+            isActive ? 'nav-item active' : 'nav-item'
+          }
+        >
+          Interactive AI Demo
+        </NavLink>
 
       </nav>
 

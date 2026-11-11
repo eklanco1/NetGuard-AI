@@ -9,6 +9,8 @@ import Analytics from './pages/Analytics'
 import AIAssistant from './pages/AIAssistant'
 import Monitoring from './pages/Monitoring'
 
+import DetectionDemo from './pages/DetectionDemo'
+
 import SecurityAlerts from './pages/SecurityAlerts'
 
 import './App.css'
@@ -26,6 +28,9 @@ function App() {
           <Route path="/analytics" element={<Analytics />} />
           <Route path="/monitoring" element={<Monitoring />} />
           <Route path="/ai-assistant" element={<AIAssistant />} />
+
+          <Route path="/demo" element={<DetectionDemo />} />
+
 
           <Route path="/alerts" element={<SecurityAlerts />} />
         </Routes>
