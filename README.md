@@ -41,6 +41,22 @@ The project demonstrates the integration of machine learning with modern web dev
 - Filtering and reviewing previous classifications
 - Direct integration with the AI Assistant through the "Explain with AI" feature
 
+**Network Traffic Monitoring**
+- Simulated network traffic monitoring using CIC-IDS2017 samples
+- Periodic AI-based BENIGN/DDoS classification
+- Interactive real-time updating traffic chart
+- Start, Pause, and Reset simulation controls
+- Configurable simulation intervals
+- Automatic integration with Security Alerts
+
+**Security Alerts**
+- Automatic alert generation for simulated DDoS detections
+- PostgreSQL-based persistent alert history
+- Severity classification: Low, Medium, High, Critical
+- Active and Resolved alert management
+- Alert statistics and status filtering
+- Automatic dashboard refresh
+
 ## Technology Stack
 
 | Layer | Technologies |
@@ -159,6 +175,18 @@ AI-powered assistant for interpreting predictions and providing security-related
 
 ![AI Security Assistant](screenshots/assistant.png)
 
+
+### Network Traffic Monitoring
+
+Simulated network traffic monitoring with AI-based DDoS detection and interactive activity visualization.
+
+![NetGuard AI Network Monitoring](screenshots/monitoring.png)
+
+### Security Alerts
+
+Security alert management with severity classification, persistent PostgreSQL storage, and incident resolution tracking.
+
+![NetGuard AI Security Alerts](screenshots/alerts.png)
 
 ## Project Structure
 
@@ -292,9 +320,6 @@ For the complete API reference, request schemas, and additional batch and assist
 The application is a portfolio and educational project. Additional security controls would be required for public production deployment.
 
 ## Planned Features
-
-- Simulated Network Traffic Monitoring
-- Security Alerts for suspicious traffic
 - Extended multiclass attack detection
 - Additional automated tests
 - Docker Compose configuration
