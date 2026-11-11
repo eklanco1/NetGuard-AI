@@ -8,6 +8,31 @@ The platform combines a PyTorch neural network, a FastAPI backend, PostgreSQL da
 
 The project demonstrates the integration of machine learning with modern web development technologies.
 
+## Live Demo
+
+**NetGuard AI is deployed and publicly accessible.**
+
+- [Live Application](https://netguard-ai-cih.pages.dev)
+- [FastAPI Documentation](https://netguard-ai-ipfm.onrender.com/docs)
+- [GitHub Repository](https://github.com/eklanco1/NetGuard-AI)
+
+### Demo Information
+
+The public application operates in read-only demonstration mode.
+
+The dashboard, analytics, prediction history, and security
+alerts use synthetic demonstration data.
+
+For security reasons, operations that modify database records
+are disabled in the public demo. This includes submitting
+predictions, running batch analyses, and resolving alerts.
+
+The AI model was trained and evaluated separately using
+the CIC-IDS2017 DDoS dataset.
+
+Synthetic demonstration records do not represent actual
+model inference results or real security incidents.
+
 ## Key Features
 
 **AI-Powered Traffic Detection**
@@ -322,11 +347,20 @@ The application is a portfolio and educational project. Additional security cont
 ## Planned Features
 - Extended multiclass attack detection
 - Additional automated tests
-- Docker Compose configuration
-- Cloud deployment
 - Additional UI/UX improvements
 
 These features are planned and are not part of the currently completed feature set.
+
+## Deployment
+
+- Frontend: Cloudflare Pages
+- Backend: Render
+- Database: Neon PostgreSQL
+- Containerization: Docker Compose configuration provided
+
+Docker Compose configuration is included in the repository
+but has not yet been validated through a complete
+containerized startup.
 
 ## Project Purpose
 
